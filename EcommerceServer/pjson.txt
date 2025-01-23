@@ -4,16 +4,14 @@
   "description": "ecommerceserver for bharatGo",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "node dist/index.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "clean": "rimraf dist",
-    "start:dev": "cross-env NODE_ENV=development npm start",
-    "start:prod": "cross-env NODE_ENV=production npm start"
+    "clean": "rimraf dist"
   },
   "author": "ganeshsadhashivam",
   "license": "MIT",
@@ -21,7 +19,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.5",
     "zod": "^3.24.1"
